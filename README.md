@@ -1,4 +1,4 @@
-# NEXUS: Global Resilience Analyzer (Interview Edition)
+# NEXUS: Global Resilience Analyzer
 
 A high-performance graph engineering project designed to showcase advanced DS&A mastery in technical interviews. It focuses on the relationship between fundamental traversal (DFS/BFS) and advanced analysis (Tarjan's Low-Link) to identify critical points of failure in global infrastructure.
 
@@ -38,19 +38,6 @@ You can compile and run the backend using standard Java (JDK 17+ requested).
 1.  Navigate to `./frontend`.
 2.  Install dependencies: `npm install`.
 3.  Run the dev server: `npm run dev`.
-
----
-
-## 🎓 Interview Talking Points
-
-### 1. "How does Tarjan's relate to DFS?"
-**Answer:** Tarjan's is a single-pass DFS. While traversing, we assign each node a `discovery_time` and a `low_link_value`. If a node `v` has `low[v] > disc[u]`, the edge `(u, v)` is a **Bridge**.
-
-### 2. "Why use A* over Dijkstra?"
-**Answer:** Dijkstra is "blind" and expands in all directions equally. A* uses a **Heuristic** ($h(n)$) to guide the search towards the goal, exploring significantly fewer nodes.
-
-### 3. "What is the time complexity of Articulation Point detection?"
-**Answer:** It is $O(V+E)$ because each vertex and edge is visited exactly once in the DFS traversal.
 
 ---
 
